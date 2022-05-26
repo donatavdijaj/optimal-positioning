@@ -31,8 +31,8 @@ export default function getOptimalPosition(
     }
   });
 
-  var emptySpace = 0;
-  var row = 0;
+  let emptySpace = 0;
+  let row = 0;
 
   for (let index = 0; index < gridArray.length; index++) {
     //prevents counting spaces from different rows together
