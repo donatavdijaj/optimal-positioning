@@ -49,8 +49,8 @@ function App() {
         <form onSubmit={submitForm} className="flex-center">
           <div className="flex-center">
             <div className="flex-col-center">
-              <label htmlFor="width">Width:</label>
               <label htmlFor="height">Height:</label>
+              <label htmlFor="width">Width:</label>
             </div>
             <div className="flex-col-center">
               <input
@@ -58,7 +58,7 @@ function App() {
                 name="height"
                 id="height"
                 className="input"
-                min={0}
+                min={1}
                 value={heightInput}
                 onChange={(e) => setHeightInput(e.target.valueAsNumber)}
               />
@@ -67,7 +67,7 @@ function App() {
                 name="width"
                 id="width"
                 className="input"
-                min={0}
+                min={1}
                 value={widthInput}
                 onChange={(e) => setWidthInput(e.target.valueAsNumber)}
               />
