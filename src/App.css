@@ -1,0 +1,24 @@
+#header {
+  padding-left: 20px;
+  padding-bottom: 1px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+#main {
+  padding: 5px;
+  padding-top: 15px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+#submit {
+  padding: 15px 20px;
+  font-size: 16px;
+}
+
+#submit:hover {
+  cursor: pointer;
+}

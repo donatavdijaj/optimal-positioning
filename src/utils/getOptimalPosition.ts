@@ -3,8 +3,8 @@ type GridComponent = {
   i: string;
   x: number;
   y: number;
-  width: number;
-  height: number;
+  w: number;
+  h: number;
 };
 
 /**
@@ -17,15 +17,15 @@ type GridComponent = {
 export default function getOptimalPosition(
   grid: Grid,
   components: GridComponent[],
-  newElement: { width: number; height: number }
+  newElement: { w: number; h: number }
 ): { x: number; y: number } {
   //Storing the grid as an array
   const gridArray = new Array<string>(grid.width * grid.height);
 
   //Fill the array with existing components in the grid
-  components.forEach(({ i, x, y, width, height }) => {
-    for (let yPos = y; yPos < height + y; yPos++) {
-      for (let xPos = x; xPos < width + x; xPos++) {
+  components.forEach(({ i, x, y, w, h }) => {
+    for (let yPos = y; yPos < h + y; yPos++) {
+      for (let xPos = x; xPos < w + x; xPos++) {
         gridArray[xPos + grid.width * yPos] = i;
       }
     }
@@ -56,14 +56,10 @@ export default function getOptimalPosition(
      */
 
     //if there is enough horizontal space, check for vertical space
-    if (emptySpace === newElement.width) {
+    if (emptySpace === newElement.w) {
       var hasVerticalSpace = true;
 
-      for (
-        let verticalPos = 1;
-        verticalPos < newElement.height;
-        verticalPos++
-      ) {
+      for (let verticalPos = 1; verticalPos < newElement.h; verticalPos++) {
         if (gridArray[index + verticalPos * grid.width]) {
           hasVerticalSpace = false;
         }
