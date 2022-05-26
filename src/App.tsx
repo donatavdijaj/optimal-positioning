@@ -47,27 +47,29 @@ function App() {
       </header>
       <main id="main">
         <form onSubmit={submitForm} className="flex-center">
-          <div>
-            <div className="flex-center">
+          <div className="flex-center">
+            <div className="flex-col-center">
               <label htmlFor="width">Width:</label>
-              <input
-                type="number"
-                name="width"
-                id="width"
-                min={0}
-                value={widthInput}
-                onChange={(e) => setWidthInput(e.target.valueAsNumber)}
-              />
-            </div>
-            <div className="flex-center">
               <label htmlFor="height">Height:</label>
+            </div>
+            <div className="flex-col-center">
               <input
                 type="number"
                 name="height"
                 id="height"
+                className="input"
                 min={0}
                 value={heightInput}
                 onChange={(e) => setHeightInput(e.target.valueAsNumber)}
+              />
+              <input
+                type="number"
+                name="width"
+                id="width"
+                className="input"
+                min={0}
+                value={widthInput}
+                onChange={(e) => setWidthInput(e.target.valueAsNumber)}
               />
             </div>
           </div>

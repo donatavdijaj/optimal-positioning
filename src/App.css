@@ -12,6 +12,13 @@
 .flex-center {
   display: flex;
   align-items: center;
+  padding: 5px;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
 }
 
 #submit {
@@ -21,4 +28,10 @@
 
 #submit:hover {
   cursor: pointer;
+}
+
+.input {
+  width: 50px;
+  padding: 2px;
+  margin: 1px;
 }
